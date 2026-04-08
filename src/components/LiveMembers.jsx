@@ -33,7 +33,7 @@ function MemberCard({ member }) {
   return (
     <div className="flex items-center justify-between p-3 rounded-xl bg-brand-bg border border-brand-border hover:border-slate-600 transition-colors">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center font-bold text-white shadow-inner text-sm">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white shadow-inner text-sm">
           {initials}
         </div>
         <div>

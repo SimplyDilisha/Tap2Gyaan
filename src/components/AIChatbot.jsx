@@ -118,7 +118,7 @@ export default function AIChatbot() {
     return content
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
-      .replace(/`(.*?)`/g, '<code class="bg-brand-border px-1.5 py-0.5 rounded text-brand-accent text-sm">$1</code>')
+      .replace(/`(.*?)`/g, '<code class="bg-brand-border px-1.5 py-0.5 rounded text-blue-400 text-sm">$1</code>')
       .replace(/\n/g, '<br />');
   };
 
@@ -127,7 +127,7 @@ export default function AIChatbot() {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-24 lg:bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-brand-accent to-amber-500 rounded-full shadow-lg shadow-brand-accent/30 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 ${isOpen ? 'scale-0' : 'scale-100'}`}
+        className={`fixed bottom-24 lg:bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full shadow-lg shadow-blue-600/30 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 ${isOpen ? 'scale-0' : 'scale-100'}`}
       >
         <MessageCircle size={24} />
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-brand-bg animate-pulse" />
@@ -136,9 +136,9 @@ export default function AIChatbot() {
       {/* Chat Window */}
       <div className={`fixed bottom-24 lg:bottom-6 right-6 z-50 w-[calc(100vw-3rem)] sm:w-96 h-[500px] max-h-[70vh] bg-brand-card border border-brand-border rounded-2xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-brand-border bg-gradient-to-r from-brand-accent/10 to-transparent rounded-t-2xl">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-brand-border bg-gradient-to-r from-blue-600/10 to-transparent rounded-t-2xl">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
               <Sparkles size={20} className="text-white" />
             </div>
             <div>
@@ -172,14 +172,14 @@ export default function AIChatbot() {
             >
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
                 message.role === 'user'
-                  ? 'bg-blue-500/20 text-blue-400'
-                  : 'bg-brand-accent/20 text-brand-accent'
+                  ? 'bg-slate-500/20 text-slate-300'
+                  : 'bg-blue-600/20 text-blue-400'
               }`}>
                 {message.role === 'user' ? <User size={16} /> : <Bot size={16} />}
               </div>
               <div className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                 message.role === 'user'
-                  ? 'bg-blue-500/20 text-blue-100 rounded-tr-sm'
+                  ? 'bg-slate-600/30 text-slate-100 rounded-tr-sm'
                   : 'bg-brand-surface text-slate-200 rounded-tl-sm'
               }`}>
                 <div
@@ -191,7 +191,7 @@ export default function AIChatbot() {
           
           {isLoading && (
             <div className="flex gap-3 animate-fade-in">
-              <div className="w-8 h-8 rounded-lg bg-brand-accent/20 text-brand-accent flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
                 <Bot size={16} />
               </div>
               <div className="bg-brand-surface px-4 py-3 rounded-2xl rounded-tl-sm">
@@ -216,13 +216,13 @@ export default function AIChatbot() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Ask me anything..."
-              className="flex-1 bg-brand-surface border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-accent transition-colors"
+              className="flex-1 bg-brand-surface border border-brand-border rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
               disabled={isLoading}
             />
             <button
               onClick={sendMessage}
               disabled={!input.trim() || isLoading}
-              className="w-11 h-11 bg-gradient-to-br from-brand-accent to-amber-500 rounded-xl flex items-center justify-center text-white disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform"
+              className="w-11 h-11 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform"
             >
               <Send size={18} />
             </button>

@@ -60,10 +60,10 @@ export default function Sidebar() {
       >
         {/* Brand */}
         <div className="px-4 py-5 border-b border-brand-border flex items-center gap-3 min-h-[68px]">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-brand-accent/20">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
             <Flame size={18} className="text-white" />
           </div>
-          <span className={`font-black text-white text-lg whitespace-nowrap overflow-hidden transition-all duration-300
+          <span className={`font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 text-lg whitespace-nowrap overflow-hidden transition-all duration-300
             ${sidebarOpen ? 'opacity-100 w-auto' : 'opacity-0 w-0 lg:group-hover/sidebar:opacity-100 lg:group-hover/sidebar:w-auto'}`}>
             One Tap Study
           </span>
@@ -102,7 +102,7 @@ export default function Sidebar() {
         {/* User section */}
         <div className="px-3 py-4 border-t border-brand-border">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-accent to-amber-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
               {username.charAt(0).toUpperCase()}
             </div>
             <div className={`flex-1 overflow-hidden transition-all duration-300

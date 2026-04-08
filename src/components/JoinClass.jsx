@@ -80,7 +80,7 @@ export default function JoinClass() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-black text-white mb-1 flex items-center gap-3">
-            <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center shadow-lg shadow-brand-accent/20">
+            <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
               <LogIn className="w-4 h-4 text-white" />
             </span>
             Study Rooms

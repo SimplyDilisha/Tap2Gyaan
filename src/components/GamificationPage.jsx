@@ -51,7 +51,7 @@ export default function GamificationPage() {
         <div className="absolute top-0 right-0 w-40 h-40 bg-brand-accent/5 rounded-full -translate-y-1/2 translate-x-1/3" />
         <div className="relative">
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center text-2xl font-black text-white shadow-xl shadow-brand-accent/30">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center text-2xl font-black text-white shadow-xl shadow-blue-500/30">
               {level}
             </div>
             <div>
@@ -71,7 +71,7 @@ export default function GamificationPage() {
           </div>
           <div className="h-3 bg-brand-bg rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-brand-accent to-amber-500 rounded-full transition-all duration-500"
+              className="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>

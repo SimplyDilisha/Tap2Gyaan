@@ -25,7 +25,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md animate-fade-in-scale">
         {/* Hero */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-brand-accent/30 animate-pulse-glow">
+          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-blue-500/30 animate-pulse-glow">
             <Flame size={36} className="text-white" />
           </div>
           <h1 className="text-4xl font-black text-white mb-2">One Tap Study</h1>
@@ -59,7 +59,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={!name.trim()}
-              className="w-full bg-gradient-to-r from-brand-accent to-amber-500 hover:from-brand-accent-hover hover:to-amber-400 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-accent/25 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
+              className="w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 hover:from-blue-400 hover:via-indigo-400 hover:to-purple-400 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98]"
             >
               Start Studying
               <ArrowRight size={18} />
