@@ -34,14 +34,10 @@ function App() {
   }
 
   return (
-<<<<<<< HEAD
     <div 
       className="min-h-screen bg-brand-bg bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-=======
-    <div className="min-h-screen">
->>>>>>> 852be6135057f5974e604fefbc87779ac7a4e64a
       <Sidebar />
 
       {/* Main content area — pushed right on desktop for sidebar */}
