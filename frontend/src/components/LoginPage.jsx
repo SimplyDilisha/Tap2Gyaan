@@ -104,7 +104,7 @@ export default function LoginPage() {
 
 
   return (
-    <div className="min-h-screen bg-brand-bg flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-[20%] left-[20%] w-96 h-96 bg-brand-accent/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />

@@ -7,6 +7,12 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.75)), url('./assets/Bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
 }
 
 @theme {
@@ -14,9 +20,9 @@ body {
   --color-brand-accent-hover: #FB923C;
   --color-brand-accent-dim: #F97316;
   --color-brand-success: #22C55E;
-  --color-brand-bg: #0A0A0A;
-  --color-brand-card: #141414;
-  --color-brand-surface: #1A1A1A;
+  --color-brand-bg: rgba(10, 10, 10, 0.7);
+  --color-brand-card: rgba(20, 20, 20, 0.82);
+  --color-brand-surface: rgba(26, 26, 26, 0.85);
   --color-brand-border: #2A2A2A;
   --color-brand-danger: #EF4444;
   --font-inter: 'Inter', sans-serif;
