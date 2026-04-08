@@ -4,12 +4,13 @@ import { useApp } from '../context/AppContext';
 import {
   Users, Timer, Brain, Briefcase, StickyNote, ListChecks, BookOpen,
   CalendarDays, Clock3, BarChart3, Trophy, Settings, LogOut, Menu, X,
-  Flame
+  Flame, Bot
 } from 'lucide-react';
 
 const navItems = [
   { path: '/', icon: Users, label: 'Study Rooms' },
   { path: '/pomodoro', icon: Timer, label: 'Pomodoro' },
+  { path: '/ai-chat', icon: Bot, label: 'AI Assistant' },
   { path: '/quizzes', icon: Brain, label: 'Quizzes' },
   { path: '/interview', icon: Briefcase, label: 'Interview' },
   { path: '/notes', icon: StickyNote, label: 'Notes' },

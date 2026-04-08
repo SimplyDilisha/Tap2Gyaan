@@ -16,6 +16,7 @@ import TimetablePage from './components/TimetablePage';
 import ReportsPage from './components/ReportsPage';
 import GamificationPage from './components/GamificationPage';
 import SettingsPage from './components/SettingsPage';
+import AIChatbot from './components/AIChatbot';
 import Toast from './components/Toast';
 import bgImage from './assets/Bg.png';
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" element={<JoinClass />} />
             <Route path="/room/:id" element={<ClassRoom />} />
             <Route path="/pomodoro" element={<PomodoroTimer />} />
+            <Route path="/ai-chat" element={<AIChatbot />} />
             <Route path="/quizzes" element={<QuizPage />} />
             <Route path="/interview" element={<InterviewPrep />} />
             <Route path="/notes" element={<NotesPage />} />
