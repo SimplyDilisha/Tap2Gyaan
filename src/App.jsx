@@ -17,6 +17,7 @@ import ReportsPage from './components/ReportsPage';
 import GamificationPage from './components/GamificationPage';
 import SettingsPage from './components/SettingsPage';
 import Toast from './components/Toast';
+import AIChatbot from './components/AIChatbot';
 
 function App() {
   const { user } = useApp();
@@ -59,6 +60,7 @@ function App() {
       </main>
 
       <Toast />
+      <AIChatbot />
     </div>
   );
 }
