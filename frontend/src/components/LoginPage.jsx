@@ -3,6 +3,9 @@ import { LogIn, UserPlus, Mail, Lock, ShieldCheck, Key, Shield } from 'lucide-re
 import { useApp } from '../context/AppContext';
 import { triggerToast } from './Toast';
 
+// API Configuration
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+
 export default function LoginPage() {
   const { login } = useApp();
   
@@ -26,7 +29,7 @@ export default function LoginPage() {
     
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/login', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -55,7 +58,7 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/signup', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, username }),
@@ -82,7 +85,7 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/verify-otp', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp }),

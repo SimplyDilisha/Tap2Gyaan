@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Bot, Send, Trash2, Sparkles, User, Copy, Check, Plus, MessageSquare, ChevronLeft, Clock, X } from 'lucide-react';
 import { triggerToast } from './Toast';
 
+// API Configuration
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+
 const CONVERSATIONS_KEY = 'ots_ai_conversations';
 const ACTIVE_CHAT_KEY = 'ots_ai_active_chat';
 
@@ -127,7 +130,7 @@ export default function AIChatbot() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/ai/chat', {
+      const res = await fetch(`${API_BASE_URL}/api/ai/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
