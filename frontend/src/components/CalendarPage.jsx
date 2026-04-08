@@ -5,9 +5,9 @@ const STORAGE_KEY = 'otsCalendar';
 const loadEvents = () => { try { const s = localStorage.getItem(STORAGE_KEY); return s ? JSON.parse(s) : []; } catch { return []; } };
 
 const SUBJECT_COLORS = {
-  'DSA': '#F97316', 'Mathematics': '#3B82F6', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
+  'DSA': '#3B82F6', 'Mathematics': '#60A5FA', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
   'Biology': '#EC4899', 'System Design': '#EAB308', 'HR Prep': '#14B8A6', 'Other': '#6B7280',
-  'Study': '#F97316', 'Break': '#22C55E', 'Exam': '#EF4444', 'Project': '#8B5CF6',
+  'Study': '#3B82F6', 'Break': '#22C55E', 'Exam': '#EF4444', 'Project': '#8B5CF6',
 };
 
 const SUBJECTS = Object.keys(SUBJECT_COLORS);
@@ -50,7 +50,7 @@ export default function CalendarPage() {
       subject,
       date: getDayStr(selectedDay),
       time,
-      color: SUBJECT_COLORS[subject] || '#F97316',
+      color: SUBJECT_COLORS[subject] || '#3B82F6',
     };
     saveEvents([...events, evt]);
     setTitle(''); setShowAdd(false);

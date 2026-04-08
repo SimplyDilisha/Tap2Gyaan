@@ -8,7 +8,7 @@ const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 const HOURS = Array.from({ length: 15 }, (_, i) => i + 6); // 6 AM to 8 PM
 
 const SUBJECT_COLORS = {
-  'DSA': '#F97316', 'Mathematics': '#3B82F6', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
+  'DSA': '#3B82F6', 'Mathematics': '#60A5FA', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
   'Biology': '#EC4899', 'System Design': '#EAB308', 'English': '#14B8A6', 'Other': '#6B7280',
   'Lunch': '#EF4444', 'Free Time': '#64748B', 'Exercise': '#F59E0B',
 };
@@ -26,7 +26,7 @@ export default function TimetablePage() {
 
   const addSlot = (e) => {
     e.preventDefault();
-    const s = { id: Date.now().toString(), day: selectedDay, subject, startHour: +startHour, endHour: +endHour, color: SUBJECT_COLORS[subject] || '#F97316' };
+    const s = { id: Date.now().toString(), day: selectedDay, subject, startHour: +startHour, endHour: +endHour, color: SUBJECT_COLORS[subject] || '#3B82F6' };
     setSlots(prev => [...prev, s]);
     setShowAdd(false);
   };

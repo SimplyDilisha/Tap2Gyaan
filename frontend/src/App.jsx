@@ -17,6 +17,7 @@ import ReportsPage from './components/ReportsPage';
 import GamificationPage from './components/GamificationPage';
 import SettingsPage from './components/SettingsPage';
 import Toast from './components/Toast';
+import bgImage from './assets/Bg.png';
 
 function App() {
   const { user } = useApp();
@@ -33,7 +34,10 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-bg">
+    <div 
+      className="min-h-screen bg-brand-bg bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <Sidebar />
 
       {/* Main content area — pushed right on desktop for sidebar */}

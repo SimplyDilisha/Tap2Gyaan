@@ -107,11 +107,11 @@ export default function LoginPage() {
     <div className="min-h-screen bg-brand-bg flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-[20%] left-[20%] w-96 h-96 bg-brand-accent/20 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-blue-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="w-full max-w-md relative z-10 animate-slide-up">
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-gradient-to-br from-brand-accent to-amber-500 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-2xl shadow-brand-accent/20">
+          <div className="w-20 h-20 bg-gradient-to-br from-brand-accent to-blue-400 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-2xl shadow-brand-accent/20">
             <LogIn size={40} className="text-white" />
           </div>
           <h1 className="text-3xl font-black text-white mb-2">One Tap Study</h1>

@@ -3,18 +3,18 @@ import { Trophy, Zap, Star, Award, Flame, BookOpen, Clock, Target, Shield, Crown
 import { useApp } from '../context/AppContext';
 
 const ALL_ACHIEVEMENTS = [
-  { id: 'first_session', icon: Star, label: 'First Session', desc: 'Complete your first study session', xpReward: 50, color: '#F97316' },
+  { id: 'first_session', icon: Star, label: 'First Session', desc: 'Complete your first study session', xpReward: 50, color: '#3B82F6' },
   { id: 'five_sessions', icon: Zap, label: '5 Sessions', desc: 'Complete 5 study sessions', xpReward: 100, color: '#EAB308' },
   { id: 'one_hour', icon: Clock, label: 'Hour Power', desc: 'Study for 1 hour total', xpReward: 100, color: '#3B82F6' },
   { id: 'quiz_master', icon: Trophy, label: 'Quiz Master', desc: 'Score 100% on a quiz', xpReward: 150, color: '#22C55E' },
   { id: 'note_taker', icon: BookOpen, label: 'Note Taker', desc: 'Create 10 notes', xpReward: 75, color: '#A855F7' },
   { id: 'streak_3', icon: Flame, label: '3-Day Streak', desc: 'Study 3 days in a row', xpReward: 100, color: '#EF4444' },
-  { id: 'streak_7', icon: Flame, label: 'Week Warrior', desc: 'Study 7 days in a row', xpReward: 250, color: '#F97316' },
+  { id: 'streak_7', icon: Flame, label: 'Week Warrior', desc: 'Study 7 days in a row', xpReward: 250, color: '#3B82F6' },
   { id: 'planner_pro', icon: Target, label: 'Planner Pro', desc: 'Complete 20 tasks', xpReward: 100, color: '#14B8A6' },
   { id: 'bookworm', icon: BookOpen, label: 'Bookworm', desc: 'Finish reading a book', xpReward: 200, color: '#8B5CF6' },
   { id: 'night_owl', icon: Shield, label: 'Night Owl', desc: 'Study past midnight', xpReward: 50, color: '#6366F1' },
   { id: 'early_bird', icon: Star, label: 'Early Bird', desc: 'Study before 6 AM', xpReward: 50, color: '#FBBF24' },
-  { id: 'legend', icon: Crown, label: 'Legend', desc: 'Reach Level 10', xpReward: 500, color: '#F97316' },
+  { id: 'legend', icon: Crown, label: 'Legend', desc: 'Reach Level 10', xpReward: 500, color: '#3B82F6' },
 ];
 
 const DAILY_CHALLENGES = [
@@ -51,7 +51,7 @@ export default function GamificationPage() {
         <div className="absolute top-0 right-0 w-40 h-40 bg-brand-accent/5 rounded-full -translate-y-1/2 translate-x-1/3" />
         <div className="relative">
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center text-2xl font-black text-white shadow-xl shadow-brand-accent/30">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-accent to-blue-400 flex items-center justify-center text-2xl font-black text-white shadow-xl shadow-brand-accent/30">
               {level}
             </div>
             <div>
@@ -71,7 +71,7 @@ export default function GamificationPage() {
           </div>
           <div className="h-3 bg-brand-bg rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-brand-accent to-amber-500 rounded-full transition-all duration-500"
+              className="h-full bg-gradient-to-r from-brand-accent to-blue-400 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
