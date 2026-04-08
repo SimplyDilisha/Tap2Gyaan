@@ -34,7 +34,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-bg">
+    <div className="min-h-screen bg-transparent">
       <Sidebar />
 
       {/* Main content area — pushed right on desktop for sidebar */}

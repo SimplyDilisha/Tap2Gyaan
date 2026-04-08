@@ -54,7 +54,7 @@ export default function Sidebar() {
       )}
 
       {/* Sidebar */}
-      <aside className={`fixed top-0 left-0 h-full z-40 bg-brand-card border-r border-brand-border flex flex-col transition-all duration-300 ease-in-out
+      <aside className={`fixed top-0 left-0 h-full z-40 bg-brand-card/80 backdrop-blur-xl border-r border-brand-border flex flex-col transition-all duration-300 ease-in-out
         ${sidebarOpen ? 'w-64 translate-x-0' : 'w-64 -translate-x-full lg:translate-x-0 lg:w-[72px] lg:hover:w-64'}
         group/sidebar`}
       >

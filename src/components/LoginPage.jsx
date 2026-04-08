@@ -21,7 +21,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg flex items-center justify-center p-4">
+    <div className="min-h-screen bg-transparent flex items-center justify-center p-4">
       <div className="w-full max-w-md animate-fade-in-scale">
         {/* Hero */}
         <div className="text-center mb-8">
@@ -33,7 +33,7 @@ export default function LoginPage() {
         </div>
 
         {/* Login Card */}
-        <div className="bg-brand-card rounded-2xl border border-brand-border p-8 shadow-2xl">
+        <div className="bg-brand-card/30 backdrop-blur-xl rounded-2xl border border-brand-border p-8 shadow-2xl">
           <div className="flex items-center gap-2 mb-6">
             <Sparkles size={18} className="text-brand-accent" />
             <h2 className="text-lg font-bold text-white">Get Started</h2>
