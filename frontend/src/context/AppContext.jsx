@@ -1,5 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// API Configuration
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+
 const AppContext = createContext();
 
 export const useApp = () => useContext(AppContext);
@@ -50,7 +53,7 @@ export const AppProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await fetch('http://127.0.0.1:5000/api/auth/logout', { method: 'POST' });
+      await fetch(`${API_BASE_URL}/api/auth/logout`, { method: 'POST' });
     } catch(e) { console.error('Logout error', e); }
     
     setUser(null);
@@ -87,7 +90,8 @@ export const AppProvider = ({ children }) => {
       sidebarOpen, setSidebarOpen,
       xp, addXP,
       achievements, unlockAchievement,
-      resetAllData
+      resetAllData,
+      apiBaseUrl: API_BASE_URL
     }}>
       {children}
     </AppContext.Provider>

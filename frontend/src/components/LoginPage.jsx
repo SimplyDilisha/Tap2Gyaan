@@ -3,6 +3,9 @@ import { LogIn, UserPlus, Mail, Lock, ShieldCheck, Key, Shield } from 'lucide-re
 import { useApp } from '../context/AppContext';
 import { triggerToast } from './Toast';
 
+// API Configuration
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+
 export default function LoginPage() {
   const { login } = useApp();
   
@@ -26,7 +29,7 @@ export default function LoginPage() {
     
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/login', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -55,7 +58,7 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/signup', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, username }),
@@ -82,7 +85,7 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/verify-otp', {
+      const res = await fetch(`${API_BASE_URL}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp }),
@@ -107,11 +110,11 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-[20%] left-[20%] w-96 h-96 bg-brand-accent/20 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-blue-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="w-full max-w-md relative z-10 animate-slide-up">
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-gradient-to-br from-brand-accent to-amber-500 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-2xl shadow-brand-accent/20">
+          <div className="w-20 h-20 bg-gradient-to-br from-brand-accent to-blue-400 rounded-2xl mx-auto flex items-center justify-center mb-4 shadow-2xl shadow-brand-accent/20">
             <LogIn size={40} className="text-white" />
           </div>
           <h1 className="text-3xl font-black text-white mb-2">One Tap Study</h1>

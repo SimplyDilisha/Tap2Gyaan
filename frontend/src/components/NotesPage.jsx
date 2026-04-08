@@ -14,7 +14,7 @@ const saveNotes = (notes) => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
 };
 
-const COLORS = ['#F97316', '#22C55E', '#3B82F6', '#A855F7', '#EC4899', '#EAB308'];
+const COLORS = ['#3B82F6', '#22C55E', '#60A5FA', '#A855F7', '#EC4899', '#EAB308'];
 
 export default function NotesPage() {
   const [notes, setNotes] = useState(loadNotes);

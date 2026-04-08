@@ -4,12 +4,13 @@ import { useApp } from '../context/AppContext';
 import {
   Users, Timer, Brain, Briefcase, StickyNote, ListChecks, BookOpen,
   CalendarDays, Clock3, BarChart3, Trophy, Settings, LogOut, Menu, X,
-  Flame
+  Flame, Bot
 } from 'lucide-react';
 
 const navItems = [
   { path: '/', icon: Users, label: 'Study Rooms' },
   { path: '/pomodoro', icon: Timer, label: 'Pomodoro' },
+  { path: '/ai-chat', icon: Bot, label: 'AI Assistant' },
   { path: '/quizzes', icon: Brain, label: 'Quizzes' },
   { path: '/interview', icon: Briefcase, label: 'Interview' },
   { path: '/notes', icon: StickyNote, label: 'Notes' },
@@ -60,7 +61,7 @@ export default function Sidebar() {
       >
         {/* Brand */}
         <div className="px-4 py-5 border-b border-brand-border flex items-center gap-3 min-h-[68px]">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-accent to-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-brand-accent/20">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-accent to-blue-400 flex items-center justify-center shrink-0 shadow-lg shadow-brand-accent/20">
             <Flame size={18} className="text-white" />
           </div>
           <span className={`font-black text-white text-lg whitespace-nowrap overflow-hidden transition-all duration-300
@@ -120,7 +121,7 @@ export default function Sidebar() {
         {/* User section */}
         <div className="px-3 py-4 border-t border-brand-border">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-accent to-amber-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-accent to-blue-400 flex items-center justify-center text-white font-bold text-sm shrink-0">
               {username.charAt(0).toUpperCase()}
             </div>
             <div className={`flex-1 overflow-hidden transition-all duration-300

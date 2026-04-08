@@ -109,7 +109,7 @@ export default function PomodoroTimer() {
   };
 
   const modeColor = mode === 'work' ? 'text-brand-accent' : mode === 'break' ? 'text-brand-success' : 'text-blue-400';
-  const modeStroke = mode === 'work' ? '#F97316' : mode === 'break' ? '#22C55E' : '#60A5FA';
+  const modeStroke = mode === 'work' ? '#3B82F6' : mode === 'break' ? '#22C55E' : '#60A5FA';
   const modeBg = mode === 'work' ? 'bg-brand-accent/10' : mode === 'break' ? 'bg-green-500/10' : 'bg-blue-500/10';
   const modeLabel = mode === 'work' ? 'Focus Time' : mode === 'break' ? 'Short Break' : 'Long Break';
 

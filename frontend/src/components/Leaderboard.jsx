@@ -57,7 +57,7 @@ export default function Leaderboard({ members }) {
                     #{index + 1}
                   </div>
 
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-accent/40 to-amber-600/40 flex items-center justify-center text-xs font-bold text-white shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-accent/40 to-blue-400/40 flex items-center justify-center text-xs font-bold text-white shrink-0">
                     {member.username ? member.username.charAt(0).toUpperCase() : '?'}
                   </div>
 

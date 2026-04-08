@@ -16,7 +16,9 @@ import TimetablePage from './components/TimetablePage';
 import ReportsPage from './components/ReportsPage';
 import GamificationPage from './components/GamificationPage';
 import SettingsPage from './components/SettingsPage';
+import AIChatbot from './components/AIChatbot';
 import Toast from './components/Toast';
+import bgImage from './assets/Bg.png';
 
 function App() {
   const { user } = useApp();
@@ -33,7 +35,10 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-brand-bg bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <Sidebar />
 
       {/* Main content area — pushed right on desktop for sidebar */}
@@ -43,6 +48,7 @@ function App() {
             <Route path="/" element={<JoinClass />} />
             <Route path="/room/:id" element={<ClassRoom />} />
             <Route path="/pomodoro" element={<PomodoroTimer />} />
+            <Route path="/ai-chat" element={<AIChatbot />} />
             <Route path="/quizzes" element={<QuizPage />} />
             <Route path="/interview" element={<InterviewPrep />} />
             <Route path="/notes" element={<NotesPage />} />

@@ -12,6 +12,7 @@ import { securityHeaders } from './middleware/security.js';
 // Import routes
 import authRoutes from './routes/auth.js';
 import classRoutes from './routes/classes.js';
+import aiRoutes from './routes/ai.js';
 
 dotenv.config();
 
@@ -61,6 +62,9 @@ app.use('/api/auth', authRoutes);
 
 // Classes / Study Rooms Routes (Protected)
 app.use('/api/classes', classRoutes);
+
+// AI Chatbot Routes
+app.use('/api/ai', aiRoutes);
 
 // ==========================================
 // 3. ERROR HANDLING

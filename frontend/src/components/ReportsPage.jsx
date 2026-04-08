@@ -99,7 +99,7 @@ export default function ReportsPage() {
   })();
 
   const SUBJECT_COLORS = {
-    'DSA': '#F97316', 'Mathematics': '#3B82F6', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
+    'DSA': '#3B82F6', 'Mathematics': '#60A5FA', 'Physics': '#A855F7', 'Chemistry': '#22C55E',
     'Biology': '#EC4899', 'System Design': '#EAB308', 'HR Prep': '#14B8A6', 'Other': '#6B7280',
   };
 
@@ -149,7 +149,7 @@ export default function ReportsPage() {
           <div className="text-xs text-slate-400">Avg session</div>
         </div>
         <div className="bg-brand-card border border-brand-border rounded-xl p-4">
-          <Flame size={16} className="text-orange-400 mb-2" />
+          <Flame size={16} className="text-blue-400 mb-2" />
           <div className="text-xl font-black text-white">{streak} days</div>
           <div className="text-xs text-slate-400">Current streak</div>
         </div>
@@ -190,7 +190,7 @@ export default function ReportsPage() {
                   <div className="h-2 bg-brand-bg rounded-full overflow-hidden">
                     <div className="h-full rounded-full transition-all" style={{
                       width: `${(time / maxSubjectTime) * 100}%`,
-                      backgroundColor: SUBJECT_COLORS[sub] || '#F97316'
+                      backgroundColor: SUBJECT_COLORS[sub] || '#3B82F6'
                     }} />
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function ReportsPage() {
           <div className="space-y-2 max-h-[300px] overflow-y-auto custom-scrollbar">
             {filteredSessions.slice(0, 20).map(s => (
               <div key={s.id} className="flex items-center gap-3 p-3 bg-brand-bg border border-brand-border/50 rounded-xl text-sm">
-                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: SUBJECT_COLORS[s.subject] || '#F97316' }} />
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: SUBJECT_COLORS[s.subject] || '#3B82F6' }} />
                 <span className="text-white font-medium flex-1">{s.subject || 'Study'}</span>
                 <span className="text-slate-400 font-mono text-xs">{formatDuration(s.duration || 0)}</span>
                 <span className="text-slate-500 text-xs">
