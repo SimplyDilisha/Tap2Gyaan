@@ -79,6 +79,24 @@ export default function Sidebar() {
 
             const active = isActive || isRoomActive;
 
+            if (item.path === '/interview') {
+              return (
+                <a
+                  key={item.path}
+                  href="https://interview-buddy-v2.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5`}
+                >
+                  <Icon size={19} className="shrink-0" />
+                  <span className={`whitespace-nowrap overflow-hidden transition-all duration-300
+                    ${sidebarOpen ? 'opacity-100 w-auto' : 'opacity-0 w-0 lg:group-hover/sidebar:opacity-100 lg:group-hover/sidebar:w-auto'}`}>
+                    {item.label}
+                  </span>
+                </a>
+              );
+            }
+
             return (
               <button
                 key={item.path}
@@ -125,6 +143,22 @@ export default function Sidebar() {
         {navItems.slice(0, 5).map(item => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path || (item.path === '/' && location.pathname.startsWith('/room'));
+          
+          if (item.path === '/interview') {
+            return (
+              <a
+                key={item.path}
+                href="https://interview-buddy-v2.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg transition-colors text-[10px] text-slate-500"
+              >
+                <Icon size={18} />
+                <span>{item.label}</span>
+              </a>
+            );
+          }
+
           return (
             <button
               key={item.path}
